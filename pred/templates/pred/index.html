@@ -1,0 +1,9 @@
+<h1>예측할 학과의 수업 이름을 입력해 보세요!</h1>
+<form action="{% url 'result'%}" method="POST">
+    {% csrf_token %}
+    <input name="currname" placeholder="전공수업명"/>
+    <br/>
+    <input type="number", name="currnum" placeholder="학과의 후보수 (1-135)"/>
+    <br/>
+    <button type="submit">체크하기</button>
+</form>
