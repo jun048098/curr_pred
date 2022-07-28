@@ -69,7 +69,7 @@ from keras.layers import Dense, Flatten, Embedding
 
 # 인공 신경망 구성
 model = Sequential()
-model.add( Embedding(2234, 8, input_length=13 ) )
+model.add( Embedding(len(X_word), 8, input_length=13 ) )
 model.add( Flatten() )
 model.add( Dense(135, activation='softmax') )
 
